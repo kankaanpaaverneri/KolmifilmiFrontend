@@ -9,7 +9,7 @@ import { LanguageIdentifier } from "../../types/enum";
 import { Language } from "../../types/type";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { setLanguage } from "../../slices/languageSlice";
-import "./Navigation.module.css";
+import "./Navigation.css";
 
 function Navigation() {
   const selectedLanguage: Language = useAppSelector(
@@ -46,15 +46,9 @@ function Navigation() {
     <>
       <header>
         <nav>
-          <NavLink to="presentation">
-            <p>{navContent.presentation}</p>
-          </NavLink>
-          <NavLink to="productions">
-            <p>{navContent.productions}</p>
-          </NavLink>
-          <NavLink to="contact">
-            <p>{navContent.contact}</p>
-          </NavLink>
+          <NavLink to="presentation">{navContent.presentation}</NavLink>
+          <NavLink to="productions">{navContent.productions}</NavLink>
+          <NavLink to="contact">{navContent.contact}</NavLink>
         </nav>
         <SwitchLanguage
           onSwitchLanguage={onSwitchLanguage}

@@ -1,0 +1,29 @@
+.language-buttons {
+}
+
+.language-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    font-size: 50px;
+    position: relative;
+    outline: none;
+}
+
+.language-buttons button::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    bottom: -0.5rem;
+    background-color: black;
+    transition-property: width left;
+    transition-duration: 0.3s;
+}
+
+.language-buttons button.selected::before {
+    width: 100%;
+    left: 0;
+}

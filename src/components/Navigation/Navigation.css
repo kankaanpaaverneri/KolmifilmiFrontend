@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 550px) {
+    header,
+    nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+nav {
+    display: flex;
+    margin-left: 1rem;
+}
+
+nav a {
+    margin: 1rem;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transition-property: left width;
+    transition-duration: 0.2s;
+}
+
+nav a:focus::before {
+    width: 100%;
+    left: 0;
+}

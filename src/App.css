@@ -17,10 +17,13 @@ main {
 
 h1 {
     font-family: "Owald", sans-serif;
+    text-align: center;
 }
 
 p,
-button {
+button,
+a {
     font-family: "Source Sans 3", sans-serif;
     font-size: 20px;
+    text-align: center;
 }

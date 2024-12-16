@@ -1,6 +1,6 @@
 import { LanguageIdentifier } from "../../types/enum";
 import { Language } from "../../types/type";
-import "./SwitchLanguage.module.css";
+import "./SwitchLanguage.css";
 interface SwitchLanguageProps {
   onSwitchLanguage: (value: LanguageIdentifier) => void;
   selectedLanguage: Language;
@@ -11,7 +11,7 @@ function SwitchLanguage({
   selectedLanguage,
 }: SwitchLanguageProps) {
   return (
-    <div>
+    <div className={"language-buttons"}>
       <button
         className={selectedLanguage === "fi" ? "selected" : ""}
         onClick={() => onSwitchLanguage(LanguageIdentifier.FI)}
@@ -22,7 +22,7 @@ function SwitchLanguage({
         className={selectedLanguage === "en" ? "selected" : ""}
         onClick={() => onSwitchLanguage(LanguageIdentifier.EN)}
       >
-        🏴󠁧󠁢󠁥󠁮󠁧󠁿
+        🇬🇧
       </button>
     </div>
   );
