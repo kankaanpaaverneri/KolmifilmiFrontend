@@ -3,13 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition-duration: 0.3s;
 }
 
 .presentation-container p {
-    margin-top: 5rem;
+    margin: 5rem 0;
     text-align: center;
-    max-width: 50rem;
-
-    transform: translateY(-10px);
+    max-width: 80%;
 }

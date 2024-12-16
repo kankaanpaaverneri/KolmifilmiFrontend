@@ -4,6 +4,7 @@ import {
   notFoundTranslations,
   NotFoundTranslations,
 } from "./notFoundTranslations";
+import "./NotFound.css";
 
 function NotFound() {
   const selectedLanguage = useAppSelector(
@@ -20,7 +21,7 @@ function NotFound() {
   }, [selectedLanguage]);
 
   return (
-    <div>
+    <div className="not-found-container">
       <h1>{notFoundContent.notFound}</h1>
     </div>
   );

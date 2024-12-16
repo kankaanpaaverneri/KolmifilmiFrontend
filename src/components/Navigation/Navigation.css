@@ -3,6 +3,8 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    padding: 0 2rem;
 }
 
 @media (max-width: 550px) {
@@ -11,15 +13,37 @@ header {
         flex-direction: column;
         flex-wrap: wrap;
     }
+
+    .primary-navigation {
+        transition-property: transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    .primary-navigation[data-visible="false"] {
+        transform: translateY(-100%);
+    }
+
+    .primary-navigation[data-visbile="true"] {
+        transform: translateY(0%);
+    }
+
+    header {
+        position: fixed;
+        inset: 0 0 20% 0;
+        background-color: lightcyan;
+    }
+    nav {
+        padding: 5rem 2rem;
+    }
 }
 
 nav {
     display: flex;
-    margin-left: 1rem;
+    gap: 2rem;
 }
 
 nav a {
-    margin: 1rem;
     text-decoration: none;
     position: relative;
 }

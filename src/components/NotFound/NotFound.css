@@ -1,0 +1,10 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-container h1 {
+    margin: 15rem 0;
+    padding-bottom: 10rem;
+}

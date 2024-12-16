@@ -1,4 +1,5 @@
 .language-buttons {
+    display: flex;
 }
 
 .language-buttons button {

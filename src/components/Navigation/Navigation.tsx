@@ -10,6 +10,7 @@ import { Language } from "../../types/type";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { setLanguage } from "../../slices/languageSlice";
 import "./Navigation.css";
+import HamburgerIcon from "./HamburgerIcon";
 
 function Navigation() {
   const selectedLanguage: Language = useAppSelector(
@@ -42,13 +43,39 @@ function Navigation() {
     }
   }, [selectedLanguage]);
 
+  const [navVisible, setNavVisible] = useState<boolean>(false);
+
+  function onClickHamburgerIcon(): void {
+    setNavVisible((prev) => (prev ? false : true));
+  }
+
   return (
     <>
-      <header>
+      <HamburgerIcon onClick={onClickHamburgerIcon} navVisible={navVisible} />
+      <header
+        aria-hidden={!navVisible}
+        id="primary-navigation"
+        className="primary-navigation"
+        data-visible={navVisible}
+      >
         <nav>
-          <NavLink to="presentation">{navContent.presentation}</NavLink>
-          <NavLink to="productions">{navContent.productions}</NavLink>
-          <NavLink to="contact">{navContent.contact}</NavLink>
+          <NavLink onClick={() => setNavVisible(false)} to="presentation">
+            {navContent.presentation}
+          </NavLink>
+          <NavLink
+            onClick={() => setNavVisible(false)}
+            aria-hidden={true}
+            to="productions"
+          >
+            {navContent.productions}
+          </NavLink>
+          <NavLink
+            onClick={() => setNavVisible(false)}
+            aria-hidden={true}
+            to="contact"
+          >
+            {navContent.contact}
+          </NavLink>
         </nav>
         <SwitchLanguage
           onSwitchLanguage={onSwitchLanguage}
