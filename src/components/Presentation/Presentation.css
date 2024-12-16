@@ -1,0 +1,12 @@
+.presentation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-container p {
+    margin-top: 5rem;
+    text-align: center;
+    max-width: 50rem;
+}

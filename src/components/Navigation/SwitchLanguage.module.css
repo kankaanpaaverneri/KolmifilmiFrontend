@@ -1,0 +1,18 @@
+div {
+    text-align: center;
+}
+
+button {
+    font-size: 50px;
+    background: none;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background-color:;
+    border-radius: 15px;
+}
+
+button.selected {
+    background: black;
+}

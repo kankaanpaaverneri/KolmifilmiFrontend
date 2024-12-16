@@ -3,12 +3,24 @@
 * {
     margin: 0;
     padding: 0;
+    color: black;
+}
+main {
+    background: linear-gradient(
+        rgba(99, 161, 212, 0.2),
+        rgba(252, 170, 38, 0.2)
+    );
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 h1 {
     font-family: "Owald", sans-serif;
 }
 
-p {
+p,
+button {
     font-family: "Source Sans 3", sans-serif;
+    font-size: 20px;
 }

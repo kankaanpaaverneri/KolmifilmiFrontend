@@ -1,11 +1,8 @@
 import "./App.css";
+import Presentation from "./components/Presentation/Presentation";
 
 function App() {
-  return (
-    <div>
-      <h1>Kolmfilmi</h1>
-    </div>
-  );
+  return <Presentation />;
 }
 
 export default App;
