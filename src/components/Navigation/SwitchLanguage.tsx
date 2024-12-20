@@ -16,16 +16,20 @@ function SwitchLanguage({
         className={selectedLanguage === "fi" ? "selected" : ""}
         onClick={() => onSwitchLanguage(LanguageIdentifier.FI)}
       >
-        🇫🇮
+        Suomi
       </button>
       <button
         className={selectedLanguage === "en" ? "selected" : ""}
         onClick={() => onSwitchLanguage(LanguageIdentifier.EN)}
       >
-        🇬🇧
+        English
       </button>
     </div>
   );
 }
+/*
+const englishFlag = `🇬🇧`;
+const finnishFlag = `🇫🇮`;
+*/
 
 export default SwitchLanguage;

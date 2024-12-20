@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     color: black;
+    font-family: "Poppins", sans-serif;
 }
 main {
     background: linear-gradient(
@@ -12,24 +13,19 @@ main {
     );
     background-size: cover;
     background-position: center;
-    height: fit-content;
 }
 
 h1 {
-    font-family: "Owald", sans-serif;
     text-align: center;
+    margin: 5rem 0;
 }
 
+h2 {
+    font-size: 25px;
+}
 p,
 button,
 a {
-    font-family: "Poppins", sans-serif;
     font-size: 20px;
     text-align: center;
-}
-
-img {
-    display: flex;
-    max-width: 80%;
-    margin: 10rem;
 }

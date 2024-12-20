@@ -1,0 +1,25 @@
+.productions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    gap: 0.2rem;
+}
+
+.productions h2 {
+    margin: 5rem 0;
+}
+
+@media (max-width: 1070px) {
+    .productions-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}

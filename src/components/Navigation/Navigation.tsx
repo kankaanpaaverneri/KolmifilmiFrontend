@@ -5,12 +5,20 @@ import {
 } from "./navigationTranslations";
 import { useEffect, useState } from "react";
 import SwitchLanguage from "./SwitchLanguage";
-import { LanguageIdentifier } from "../../types/enum";
+import { LanguageIdentifier, NavigationIdentifier } from "../../types/enum";
 import { Language } from "../../types/type";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { setLanguage } from "../../slices/languageSlice";
 import "./Navigation.css";
 import HamburgerIcon from "./HamburgerIcon";
+import { useLocation } from "react-router";
+import { paths } from "../../paths/paths";
+import getNavSelected from "./getNavSelected";
+
+interface NavState {
+  visible: boolean;
+  navSelected: NavigationIdentifier;
+}
 
 function Navigation() {
   const selectedLanguage: Language = useAppSelector(
@@ -20,6 +28,8 @@ function Navigation() {
   const [navContent, setNavContent] = useState<NavigationTranslations>(
     navigationContent[selectedLanguage] || navigationContent["fi"],
   );
+
+  const location = useLocation();
 
   function onSwitchLanguage(languageId: LanguageIdentifier): void {
     if (!languageId) {
@@ -41,38 +51,78 @@ function Navigation() {
     if (selectedLanguage === "fi" || selectedLanguage === "en") {
       setNavContent(navigationContent[selectedLanguage]);
     }
-  }, [selectedLanguage]);
+    if (location.pathname) {
+      setNavState((prev) => {
+        return {
+          ...prev,
+          navSelected: getNavSelected(location.pathname),
+        };
+      });
+    }
+  }, [selectedLanguage, location]);
 
-  const [navVisible, setNavVisible] = useState<boolean>(false);
+  const [navState, setNavState] = useState<NavState>({
+    visible: false,
+    navSelected: NavigationIdentifier.NONE,
+  });
+
+  function onClickNavLink(selected: NavigationIdentifier) {
+    setNavState(() => {
+      return {
+        visible: false,
+        navSelected: selected,
+      };
+    });
+  }
 
   function onClickHamburgerIcon(): void {
-    setNavVisible((prev) => (prev ? false : true));
+    setNavState((prev) => {
+      return {
+        ...prev,
+        visible: prev.visible ? false : true,
+      };
+    });
   }
 
   return (
     <>
-      <HamburgerIcon onClick={onClickHamburgerIcon} navVisible={navVisible} />
+      <HamburgerIcon
+        onClick={onClickHamburgerIcon}
+        navVisible={navState.visible}
+        aria-label="Toggle navigation"
+      />
       <header
-        aria-hidden={!navVisible}
+        aria-hidden={!navState.visible}
         id="primary-navigation"
-        className="primary-navigation"
-        data-visible={navVisible}
+        className={`primary-navigation ${navState.visible ? "selected" : ""}`}
       >
         <nav>
-          <NavLink onClick={() => setNavVisible(false)} to="presentation">
+          <NavLink
+            onClick={() => {
+              onClickNavLink(NavigationIdentifier.PRESENTATION);
+            }}
+            to={paths.presentation}
+            className={`${navState.navSelected === NavigationIdentifier.PRESENTATION ? "selected" : ""}`}
+          >
             {navContent.presentation}
           </NavLink>
           <NavLink
-            onClick={() => setNavVisible(false)}
+            onClick={() => {
+              onClickNavLink(NavigationIdentifier.PRODUCTIONS);
+            }}
             aria-hidden={true}
-            to="productions"
+            to={paths.productions}
+            className={`${navState.navSelected === NavigationIdentifier.PRODUCTIONS ? "selected" : ""}`}
           >
             {navContent.productions}
           </NavLink>
           <NavLink
-            onClick={() => setNavVisible(false)}
+            onClick={() => {
+              onClickNavLink(NavigationIdentifier.CONTACT);
+            }}
             aria-hidden={true}
-            to="contact"
+            to={paths.contact}
+            className={`${navState.navSelected === NavigationIdentifier.CONTACT ? "selected" : ""}`}
           >
             {navContent.contact}
           </NavLink>

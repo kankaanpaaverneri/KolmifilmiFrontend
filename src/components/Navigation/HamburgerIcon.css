@@ -4,12 +4,12 @@
 
 @media (max-width: 550px) {
     .hamburger-icon {
-        position: absolute;
+        position: relative;
         display: flex;
         flex-direction: column;
         cursor: pointer;
         background: none;
-        z-index: 1;
+        z-index: 2;
     }
 
     .hamburger-icon .sandwich {
@@ -20,7 +20,6 @@
         margin: 2rem;
         background-color: black;
         border-radius: 5px;
-        transition: all 0.3s ease-in-out;
     }
 
     .sandwich::after,
@@ -33,6 +32,9 @@
         height: 6px;
         background: black;
         border-radius: 5px;
+        transition-property: rotateZ translate background;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
     }
     .sandwich::after {
         transform: translateY(1rem);
@@ -42,20 +44,17 @@
         transform: translateY(-1rem);
     }
 
-    .hamburger-icon.open {
-        position: fixed;
-    }
-
     .hamburger-icon.open .sandwich {
-        transform: translateX(-50px);
+        position: fixed;
         background: transparent;
+        transform: translateX(-50px);
     }
 
     .hamburger-icon.open .sandwich::before {
-        transform: rotate(45deg) translate(35px, -35px);
+        transform: rotateZ(45deg) translate(35px, -35px);
     }
 
     .hamburger-icon.open .sandwich::after {
-        transform: rotate(-45deg) translate(35px, 35px);
+        transform: rotateZ(-45deg) translate(35px, 35px);
     }
 }

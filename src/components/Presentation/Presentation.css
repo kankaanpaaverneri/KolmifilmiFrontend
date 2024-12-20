@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.presentation-container img {
+    margin: 5rem 0;
+}
+
 .presentation-container p {
     margin: 5rem 0;
     text-align: center;

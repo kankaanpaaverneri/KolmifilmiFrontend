@@ -10,11 +10,11 @@ export const navigationContent: Record<Language, NavigationTranslations> = {
   fi: {
     presentation: "Esittely",
     productions: "Tuotannot",
-    contact: "Yhteystiedot",
+    contact: "Ota yhteyttä",
   },
   en: {
     presentation: "Presentation",
     productions: "Productions",
-    contact: "Contact",
+    contact: "Contact us",
   },
 };

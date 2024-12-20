@@ -1,0 +1,11 @@
+.business-partners-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+@media (max-width: 1070px) {
+    .business-partners-container {
+        flex-direction: column;
+    }
+}

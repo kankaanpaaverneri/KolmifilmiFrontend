@@ -3,3 +3,10 @@ export enum LanguageIdentifier {
   FI,
   EN,
 }
+
+export enum NavigationIdentifier {
+  NONE,
+  PRESENTATION,
+  PRODUCTIONS,
+  CONTACT,
+}

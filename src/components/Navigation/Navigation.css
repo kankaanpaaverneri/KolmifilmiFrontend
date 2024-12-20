@@ -3,7 +3,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
     padding: 0 2rem;
 }
 
@@ -14,32 +13,33 @@ header {
         flex-wrap: wrap;
     }
 
+    header {
+        position: fixed;
+        z-index: 1;
+        inset: 0 0 20% 0;
+        background-color: lightcyan;
+    }
+
+    nav {
+        padding: 5rem 2rem;
+    }
+
     .primary-navigation {
         transition-property: transform;
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
-    }
-
-    .primary-navigation[data-visible="false"] {
         transform: translateY(-100%);
     }
 
-    .primary-navigation[data-visbile="true"] {
+    .primary-navigation.selected {
         transform: translateY(0%);
-    }
-
-    header {
-        position: fixed;
-        inset: 0 0 20% 0;
-        background-color: lightcyan;
-    }
-    nav {
-        padding: 5rem 2rem;
     }
 }
 
 nav {
     display: flex;
+    align-items: center;
+    text-align: center;
     gap: 2rem;
 }
 
@@ -60,7 +60,7 @@ nav a::before {
     transition-duration: 0.2s;
 }
 
-nav a:focus::before {
+nav a.selected::before {
     width: 100%;
     left: 0;
 }

@@ -16,7 +16,7 @@ export const presentationContent: Record<Language, PresentationTranslations> = {
   en: {
     title: "Kolmifilmi",
     presentation: `
-    We are a production company that specializes in commercial, bussines and music videos.
+    We are a production company that specializes in commercial, business and music videos.
     Providing media solutions where cinematic storytelling connects to you target audiences needs.
     `,
   },

@@ -4,7 +4,7 @@ import {
   PresentationTranslations,
 } from "./presentationTranslations";
 import { useAppSelector } from "../../hooks/hooks";
-import logo from "../../../public/kolmifilmi_logo.png";
+import logo from "/kolmifilmi_logo.png";
 import "./Presentation.css";
 
 function Presentation() {

@@ -1,0 +1,8 @@
+kolmifilmi_icon.svg filter=lfs diff=lfs merge=lfs -text
+kolmifilmi_logo.png filter=lfs diff=lfs merge=lfs -text
+pk_poster_small.png filter=lfs diff=lfs merge=lfs -text
+tr_poster_small.png filter=lfs diff=lfs merge=lfs -text
+vk_poster_small.png filter=lfs diff=lfs merge=lfs -text
+sebastian_kara_profile.jpg filter=lfs diff=lfs merge=lfs -text
+valtti_hyvarinen_profile.jpg filter=lfs diff=lfs merge=lfs -text
+verneri_kankaanpaa_profile.jpg filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,12 @@
+.business-partner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.business-partner-container img {
+    max-width: 50%;
+    margin-bottom: 5rem;
+}
