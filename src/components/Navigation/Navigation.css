@@ -4,9 +4,22 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: relative;
 }
 
-@media (max-width: 550px) {
+.exit-nav {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .exit-nav {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        font-size: 30px;
+    }
     header,
     nav {
         flex-direction: column;

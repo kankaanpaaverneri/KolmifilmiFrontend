@@ -6,7 +6,7 @@
 }
 
 .production-details {
-    max-width: 20%;
+    display: block;
 }
 
 .production-poster img {

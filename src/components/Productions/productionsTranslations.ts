@@ -32,9 +32,7 @@ export const productionsTranslations: Record<
         productionId: 1,
         productionName: "Meidän Valtakunta",
         productionDescription: `
-        Meidän Valtakunta on syksyllä 2024 julkaistu lyhytelokuva,
-        joka yhdistelee länsimaista satuperinnettä moderneihin
-        musiikkivideokerronnan keinoihin.
+        Meidän Valtakunta on syksyllä 2024 julkaistu lyhyt musikaalielokuva, joka yhdistelee länsimaista satuperinnettä moderneihin musiikkivideokerronnan keinoihin.
         `,
         productionPoster: vkPoster,
         imdbLink: "https://www.imdb.com/title/tt34619229/",
@@ -42,14 +40,16 @@ export const productionsTranslations: Record<
       {
         productionId: 2,
         productionName: "Taivaanranta",
-        productionDescription: `Taivaanranta on scifipätkä.`,
+        productionDescription: `Tammikuussa 2023 julkaistu Taivaanranta on lyhyt tieteisfiktioelokuva, joka käsittelee valtaa ja perintöä näyttämönään neonvaloissa kylpevä tulevaisuuden kaupunki.`,
         productionPoster: trPoster,
         imdbLink: "https://www.imdb.com/title/tt27600587/",
       },
       {
         productionId: 3,
         productionName: "Pinnat kireenä",
-        productionDescription: `Pinnat kireenä kertoo polkupyöristä.`,
+        productionDescription: `
+        Vuoden 2023 joulukuussa julkaistu Pinnat Kireenä on lyhyt toimintakomedia, joka käsittelee internetissä muodostuvia sosiaalisia kuplia satiirin keinoin.
+        `,
         productionPoster: pkPoster,
         imdbLink: "https://www.imdb.com/title/tt28308058/",
       },
@@ -63,10 +63,9 @@ export const productionsTranslations: Record<
     productions: [
       {
         productionId: 1,
-        productionName: "Shore of Two Kingdoms",
+        productionName: "The Shore of Two Kingdoms",
         productionDescription: `
-        A tragedy on the nature of happy ever afters
-        and a tale about the loss of two kingdoms.
+        Released in the fall of 2024 The Shore of Two Kingdoms is a musical short film that combines western fables to the conventions of contemporary music videos.
         `,
         productionPoster: vkPoster,
         imdbLink: "https://www.imdb.com/title/tt34619229/",
@@ -75,9 +74,7 @@ export const productionsTranslations: Record<
         productionId: 2,
         productionName: "Skyline District",
         productionDescription: `
-        In a divided city of the future,
-        an ambitious street child gets the chance to fulfill his dreams,
-        if he is ready to murder the Vice Mayor of the city.
+        Released in the beginning of 2023 Skyline District is a short science fiction film about themes of power and legacy set in a future city bathed in neon light.
         `,
         productionPoster: trPoster,
         imdbLink: "https://www.imdb.com/title/tt27600587/",
@@ -86,10 +83,7 @@ export const productionsTranslations: Record<
         productionId: 3,
         productionName: "Strained Brakes",
         productionDescription: `
-        After her move from the country,
-        a young woman finds herself as a target of a city-wide conspiracy,
-        where a well-connected network of cyclist wages an unseen war over
-        the streets of Helsinki.
+        Released in the December of 2023 Strained Brakes is a satirical short action comedy about the social media bubbles that form around topics on the internet.
         `,
         productionPoster: pkPoster,
         imdbLink: "https://www.imdb.com/title/tt28308058/",

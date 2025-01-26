@@ -10,3 +10,7 @@
     max-width: 50%;
     margin-bottom: 5rem;
 }
+
+.business-partner-container p {
+    max-width: 90%;
+}

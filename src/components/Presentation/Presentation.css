@@ -10,7 +10,45 @@
 }
 
 .presentation-container p {
-    margin: 5rem 0;
+    margin: 4rem 0;
     text-align: center;
     max-width: 80%;
+}
+
+.video-container {
+    position: relative;
+    background: none;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: auto;
+}
+
+.horizontal-images-list {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-images-list img,
+.vertical-images-list img {
+    width: 80%;
+}
+
+.vertical-images-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 850px) {
+    .horizontal-images-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

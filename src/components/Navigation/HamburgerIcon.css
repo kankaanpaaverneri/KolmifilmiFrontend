@@ -2,21 +2,21 @@
     display: none;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 850px) {
     .hamburger-icon {
-        position: relative;
+        position: fixed;
         display: flex;
         flex-direction: column;
         cursor: pointer;
         background: none;
-        z-index: 2;
+        z-index: 1;
     }
 
     .hamburger-icon .sandwich {
         position: absolute;
         left: 0;
-        width: 50px;
-        height: 6px;
+        width: 30px;
+        height: 3px;
         margin: 2rem;
         background-color: black;
         border-radius: 5px;
@@ -28,33 +28,16 @@
         position: absolute;
         left: 0;
         right: 0;
-        width: 50px;
-        height: 6px;
+        width: 30px;
+        height: 3px;
         background: black;
         border-radius: 5px;
-        transition-property: rotateZ translate background;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
     }
     .sandwich::after {
-        transform: translateY(1rem);
+        transform: translateY(0.5rem);
     }
 
     .sandwich::before {
-        transform: translateY(-1rem);
-    }
-
-    .hamburger-icon.open .sandwich {
-        position: fixed;
-        background: transparent;
-        transform: translateX(-50px);
-    }
-
-    .hamburger-icon.open .sandwich::before {
-        transform: rotateZ(45deg) translate(35px, -35px);
-    }
-
-    .hamburger-icon.open .sandwich::after {
-        transform: rotateZ(-45deg) translate(35px, 35px);
+        transform: translateY(-0.5rem);
     }
 }

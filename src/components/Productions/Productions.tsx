@@ -33,8 +33,6 @@ function Productions() {
           );
         })}
       </div>
-      <h2>{productionsContent.musicVideosTitle}</h2>
-      <h2>{productionsContent.commericalVideosTitle}</h2>
     </div>
   );
 }

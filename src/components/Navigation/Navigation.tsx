@@ -97,6 +97,9 @@ function Navigation() {
         className={`primary-navigation ${navState.visible ? "selected" : ""}`}
       >
         <nav>
+          <a className="exit-nav" onClick={onClickHamburgerIcon}>
+            X
+          </a>
           <NavLink
             onClick={() => {
               onClickNavLink(NavigationIdentifier.PRESENTATION);
