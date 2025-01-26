@@ -7,6 +7,9 @@ import { useAppSelector } from "../../hooks/hooks";
 import logo from "/kolmifilmi_logo.png";
 import "./Presentation.css";
 import video from "/kolmifilmi_showreel.mp4";
+import ImagesContainer from "./ImagesContainer";
+import { useNavigate } from "react-router";
+import { paths } from "../../paths/paths";
 
 function Presentation() {
   const selectedLanguage = useAppSelector(
@@ -20,36 +23,22 @@ function Presentation() {
       setPresentation(presentationContent[selectedLanguage]);
     }
   }, [selectedLanguage]);
+  const navigation = useNavigate();
+  function goToContactPage() {
+    navigation(paths.contact);
+  }
 
   return (
     <div className="presentation-container">
       <img width={"200rem"} src={logo} />
+      <button onClick={goToContactPage}>{presentation.contactUs}</button>
       <p>{presentation.presentation}</p>
       <div className="video-container">
         <video autoPlay loop muted>
           <source src={video} />
         </video>
       </div>
-      <div className="images-container">
-        <div className="images-header">
-          <h1>{presentation.behindTheScenes}</h1>
-        </div>
-        <div className="horizontal-images-list">
-          {presentation.horizontalImages1.map((image, index) => {
-            return <img key={index} src={image} />;
-          })}
-        </div>
-        <div className="horizontal-images-list">
-          {presentation.horizontalImages2.map((image, index) => {
-            return <img key={index} src={image} />;
-          })}
-        </div>
-        <div className="vertical-images-list">
-          {presentation.verticalImages.map((image, index) => {
-            return <img key={index} src={image} />;
-          })}
-        </div>
-      </div>
+      <ImagesContainer presentation={presentation} />
     </div>
   );
 }

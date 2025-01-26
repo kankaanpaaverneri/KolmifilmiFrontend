@@ -1,6 +1,6 @@
 import { Language } from "../../types/type";
 
-export interface ProductionTranslation {
+export interface ShortFilmProductionTranslation {
   productionId: number;
   productionName: string;
   productionDescription: string;
@@ -8,17 +8,36 @@ export interface ProductionTranslation {
   imdbLink: string;
 }
 
+export interface OtherProductionsTranslation {
+  productionId: number;
+  productionName: string;
+  productionDescription: string;
+  productionImages: string[];
+}
+
 export interface ProductionsTranslations {
   mainTitle: string;
   shortFilmsTitle: string;
   musicVideosTitle: string;
   commericalVideosTitle: string;
-  productions: ProductionTranslation[];
+  shortfilmProductions: ShortFilmProductionTranslation[];
+  musicVideoProductions: OtherProductionsTranslation[];
+  commercialVideoProductions: OtherProductionsTranslation[];
 }
 
+// Poster imports
 import vkPoster from "/vk_poster_small.png";
 import pkPoster from "/pk_poster_small.png";
 import trPoster from "/tr_poster_small.png";
+
+//Music video screenshots
+import physicalShot1 from "/physical_shot_1.png";
+import physicalShot2 from "/physical_shot_2.png";
+import fpShot1 from "/fp_shot_1.png";
+import fpShot2 from "/fp_shot_2.png";
+
+const physicalImages = [physicalShot1, physicalShot2];
+const fpImages = [fpShot1, fpShot2];
 
 export const productionsTranslations: Record<
   Language,
@@ -27,7 +46,7 @@ export const productionsTranslations: Record<
   fi: {
     mainTitle: "Tuotannot",
     shortFilmsTitle: "Lyhytelokuvat",
-    productions: [
+    shortfilmProductions: [
       {
         productionId: 1,
         productionName: "Meidän Valtakunta",
@@ -56,11 +75,27 @@ export const productionsTranslations: Record<
     ],
     musicVideosTitle: "Musiikkivideot",
     commericalVideosTitle: "Mainosvideot",
+    musicVideoProductions: [
+      {
+        productionId: 1,
+        productionName: "Physical",
+        productionDescription: `Improvisaatiokomiikkaa ja tanssia yhdistelevä ”Let’s Get Physical” on Kolmifilmin keväällä 2024 toteuttama musiikkivideohanke stand up -koomikolle.`,
+        productionImages: physicalImages,
+      },
+    ],
+    commercialVideoProductions: [
+      {
+        productionId: 1,
+        productionName: "Fiksuposti",
+        productionDescription: `Toteutimme syksyllä 2023 Fiksupostin Soittopyyntöpalvelulle mainoksen, joka käsittelee yhtä yrittäjyyden yleisimmistä kompastuskivistä komedian keinoin.`,
+        productionImages: fpImages,
+      },
+    ],
   },
   en: {
     mainTitle: "Productions",
     shortFilmsTitle: "Short films",
-    productions: [
+    shortfilmProductions: [
       {
         productionId: 1,
         productionName: "The Shore of Two Kingdoms",
@@ -91,5 +126,21 @@ export const productionsTranslations: Record<
     ],
     musicVideosTitle: "Music videos",
     commericalVideosTitle: "Commercial videos",
+    musicVideoProductions: [
+      {
+        productionId: 1,
+        productionName: "Physical",
+        productionDescription: `Combining improvisational comedy and dance ”Let’s Get Physical” is a music video project for a stand-up comedian, produced by Kolmifilmi in the spring of 2024.`,
+        productionImages: physicalImages,
+      },
+    ],
+    commercialVideoProductions: [
+      {
+        productionId: 1,
+        productionName: "Fiksuposti",
+        productionDescription: `In the fall of 2023, we created an advertisement for "Fiksuposti" Call Request Service, which addresses one of the most common pitfalls of entrepreneurship through comedy.`,
+        productionImages: fpImages,
+      },
+    ],
   },
 };

@@ -1,10 +1,16 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .business-partners-container {
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 850px) {
     .business-partners-container {
         flex-direction: column;
     }

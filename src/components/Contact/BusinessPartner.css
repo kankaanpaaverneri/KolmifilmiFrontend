@@ -7,10 +7,10 @@
 }
 
 .business-partner-container img {
-    max-width: 50%;
-    margin-bottom: 5rem;
+    width: 50%;
+    margin-bottom: 1rem;
 }
 
 .business-partner-container p {
-    max-width: 90%;
+    font-size: 15px;
 }

@@ -1,11 +1,11 @@
-import { ProductionTranslation } from "./productionsTranslations";
-import "./Production.css";
+import { ShortFilmProductionTranslation } from "./productionsTranslations";
+import "./ShortFilmProduction.css";
 
-interface ProductionProps {
-  production: ProductionTranslation;
+interface ShortFilmProductionProps {
+  production: ShortFilmProductionTranslation;
 }
 
-function Production({ production }: ProductionProps) {
+function ShortFilmProduction({ production }: ShortFilmProductionProps) {
   return (
     <div className="production">
       <div className="production-poster">
@@ -24,4 +24,4 @@ function Production({ production }: ProductionProps) {
   );
 }
 
-export default Production;
+export default ShortFilmProduction;

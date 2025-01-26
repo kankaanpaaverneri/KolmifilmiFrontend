@@ -7,10 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 main {
-    background: linear-gradient(
-        rgba(99, 161, 212, 0.2),
-        rgba(252, 170, 38, 0.2)
-    );
+    background: linear-gradient(rgba(0, 128, 255, 0.2), rgba(0, 0, 0, 0.2));
     background-size: cover;
     background-position: center;
 }
